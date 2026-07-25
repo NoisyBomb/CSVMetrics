@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVMetrics", "CSVMetrics\CSVMetrics.csproj", "{FEAF07B3-5962-471E-BC7E-B4CAFBB1A6D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVMetrics.Domain", "src\CSVMetrics.Domain\CSVMetrics.Domain.csproj", "{003FD00C-A2F4-467C-B601-49D6DF171EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVMetrics.Application", "src\CSVMetrics.Application\CSVMetrics.Application.csproj", "{A7943CB8-52E7-427C-93DE-D39EE1B11B32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVMetrics.Infrastructure", "src\CSVMetrics.Infrastructure\CSVMetrics.Infrastructure.csproj", "{72C0C656-D2EE-49B0-8A68-8FE8A43C858C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVMetrics.API", "src\CSVMetrics.API\CSVMetrics.API.csproj", "{6C2971A0-FBDD-4263-A30A-DBE5E658D616}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVMetrics.UnitTests", "tests\CSVMetrics.UnitTests\CSVMetrics.UnitTests.csproj", "{1A53D804-F7C2-4FBE-AEF1-963DF89C0CDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVMetrics.IntegrationTests", "tests\CSVMetrics.IntegrationTests\CSVMetrics.IntegrationTests.csproj", "{A0713A07-E1B0-44C0-9F82-7C09DBC5D407}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEAF07B3-5962-471E-BC7E-B4CAFBB1A6D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAF07B3-5962-471E-BC7E-B4CAFBB1A6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAF07B3-5962-471E-BC7E-B4CAFBB1A6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAF07B3-5962-471E-BC7E-B4CAFBB1A6D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{003FD00C-A2F4-467C-B601-49D6DF171EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003FD00C-A2F4-467C-B601-49D6DF171EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003FD00C-A2F4-467C-B601-49D6DF171EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003FD00C-A2F4-467C-B601-49D6DF171EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7943CB8-52E7-427C-93DE-D39EE1B11B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7943CB8-52E7-427C-93DE-D39EE1B11B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7943CB8-52E7-427C-93DE-D39EE1B11B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7943CB8-52E7-427C-93DE-D39EE1B11B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72C0C656-D2EE-49B0-8A68-8FE8A43C858C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72C0C656-D2EE-49B0-8A68-8FE8A43C858C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72C0C656-D2EE-49B0-8A68-8FE8A43C858C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C0C656-D2EE-49B0-8A68-8FE8A43C858C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2971A0-FBDD-4263-A30A-DBE5E658D616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C2971A0-FBDD-4263-A30A-DBE5E658D616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C2971A0-FBDD-4263-A30A-DBE5E658D616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C2971A0-FBDD-4263-A30A-DBE5E658D616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A53D804-F7C2-4FBE-AEF1-963DF89C0CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A53D804-F7C2-4FBE-AEF1-963DF89C0CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A53D804-F7C2-4FBE-AEF1-963DF89C0CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A53D804-F7C2-4FBE-AEF1-963DF89C0CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0713A07-E1B0-44C0-9F82-7C09DBC5D407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0713A07-E1B0-44C0-9F82-7C09DBC5D407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0713A07-E1B0-44C0-9F82-7C09DBC5D407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0713A07-E1B0-44C0-9F82-7C09DBC5D407}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
