@@ -4,7 +4,7 @@ using CSVMetrics.Domain.Entities;
 
 namespace CSVMetrics.Infrastructure;
 
-public class MeasurementValueConfiguration : IEntityTypeConfiguration<MeasurementValue>
+public class MeasurementValueConf : IEntityTypeConfiguration<MeasurementValue>
 {
     public void Configure(EntityTypeBuilder<MeasurementValue> builder)
     {
