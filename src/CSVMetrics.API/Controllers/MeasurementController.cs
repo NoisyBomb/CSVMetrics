@@ -32,12 +32,12 @@ public class MeasurementsController : ControllerBase
                 errors.AddRange(result.Errors.Select(e => e.ErrorMessage));
             }
         }
-
         if (errors.Count > 0)
         {
             return BadRequest(errors);
         }
-
-        return Ok(rows);
+        var calculator = new AggregateCalculator();
+        var yoy = calculator.Calculate(rows, file.FileName);
+        return Ok(yoy);
     }
 }
