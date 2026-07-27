@@ -1,9 +1,10 @@
 using CSVMetrics.Infrastructure;
+using CSVMetrics.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddInfrastructure(builder.Configuration);
-
+builder.Services.AddScoped<CsvParser>();
 // Add services to the container.
 
 builder.Services.AddControllers();
