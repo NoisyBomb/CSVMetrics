@@ -18,6 +18,7 @@ builder.Services.AddScoped<CsvValidator>();
 builder.Services.AddScoped<AggregateCalculator>();
 builder.Services.AddScoped<CsvUploadService>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
