@@ -7,37 +7,21 @@ namespace CSVMetrics.API.Controllers;
 [Route("api/[controller]")]
 public class MeasurementsController : ControllerBase
 {
-    private readonly CsvParser _csvParser;
-    public MeasurementsController(CsvParser csvParser)
+    private readonly CsvUploadService _csvUploadService;
+    public MeasurementsController(CsvUploadService csvUploadService)
     {
-        _csvParser = csvParser;
+        _csvUploadService = csvUploadService;
     }
 
     [HttpPost("upload")]
-    public IActionResult Upload(IFormFile file)
+    public async Task<IActionResult> Upload(IFormFile file)
     {
         using var stream = file.OpenReadStream();
-        var rows = _csvParser.Parse(stream);
-        if (rows.Count < 1 || rows.Count > 10000)
+        var result = await _csvUploadService.UploadAsync(stream, file.FileName);
+        if (!result.IsSuccess)
         {
-            return BadRequest("File must contain between 1 and 10000 rows");
+            return BadRequest(result.Errors);
         }
-        var validator = new CsvValidator();
-        var errors = new List<string>();
-        foreach (var row in rows)
-        {
-            var result = validator.Validate(row);
-            if (!result.IsValid)
-            {
-                errors.AddRange(result.Errors.Select(e => e.ErrorMessage));
-            }
-        }
-        if (errors.Count > 0)
-        {
-            return BadRequest(errors);
-        }
-        var calculator = new AggregateCalculator();
-        var yoy = calculator.Calculate(rows, file.FileName);
-        return Ok(yoy);
+        return Ok(result.Result);
     }
 }
