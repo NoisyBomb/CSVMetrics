@@ -18,6 +18,7 @@ builder.Services.AddScoped<CsvValidator>();
 builder.Services.AddScoped<AggregateCalculator>();
 builder.Services.AddScoped<CsvUploadService>();
 builder.Services.AddScoped<ResultsQueryService>();
+builder.Services.AddScoped<RecentValuesQueryService>();
 
 var app = builder.Build();
 

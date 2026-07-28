@@ -20,4 +20,13 @@ public class MeasurementRepository : IMeasurementRepository
         var existing = await _context.Values.Where(v => v.FileName == fileName).ToListAsync();
         _context.Values.RemoveRange(existing);
     }
+    public async Task<List<MeasurementValue>> GetRecentByFileNameAsync(string fileName, int count)
+    {
+        return await _context.Values
+            .AsNoTracking()
+            .Where(v => v.FileName == fileName)
+            .OrderByDescending(v => v.Date)
+            .Take(count)
+            .ToListAsync();
+    }
 }
