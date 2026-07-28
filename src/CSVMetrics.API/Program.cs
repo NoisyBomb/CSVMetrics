@@ -1,5 +1,6 @@
 using CSVMetrics.Infrastructure;
 using CSVMetrics.Application;
+using CSVMetrics.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +21,9 @@ builder.Services.AddScoped<CsvUploadService>();
 builder.Services.AddScoped<ResultsQueryService>();
 builder.Services.AddScoped<RecentValuesQueryService>();
 
-var app = builder.Build();
 
+var app = builder.Build();
+app.UseMiddleware<ExceptionHandler>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -29,7 +31,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
